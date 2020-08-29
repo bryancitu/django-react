@@ -1,2 +1,5 @@
 *.pyc
 db.sqlite3
+node_modules/
+webpack-stats-local.json
+workshop/front/workshop/static/
