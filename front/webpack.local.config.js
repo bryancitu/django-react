@@ -18,7 +18,8 @@ config.ip = ip
 
 // Use webpack dev server
 config.entry = {
-  vendors: ['react', 'babel-polyfill'],
+    App: ['./src/views/App'],
+    vendors: ['react', 'babel-polyfill'],
 }
 
 // override django's STATIC_URL for webpack bundles
