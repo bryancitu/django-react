@@ -120,5 +120,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'links/static',
+    BASE_DIR / 'front/workshop/static',
+]
 
-STATICFILES_DIRS = [BASE_DIR / 'links/static',]
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'BUNDLE_DIR_NAME': 'bundles/local/',  # end with slash
+        'STATS_FILE': BASE_DIR / 'front/webpack-stats-local.json',
+    }
+}
